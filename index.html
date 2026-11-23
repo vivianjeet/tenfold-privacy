@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-/pxn1oV6Lc/qmJa6+3eFt8MocQyw3yh16HC9lmY3lXM='; base-uri 'none'; form-action 'none'" />
+<meta name="referrer" content="no-referrer" />
+<meta name="color-scheme" content="light dark" />
+<title>Tenfold privacy policy</title>
+<style>:root { color-scheme: light dark; --paper: #EDEEEE; --card: #F5F6F6; --ink: #17191A; --muted: #55595C; --line: rgba(23,25,26,.16); --primary: #22262A; }
+@media (prefers-color-scheme: dark) { :root { --paper: #101112; --card: #181A1B; --ink: #E8EAEA; --muted: #9EA4A7; --line: rgba(232,234,234,.15); --primary: #C9CFD2; } }
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size: 1rem; line-height: 1.55; }
+.page { max-width: 42rem; margin: 0 auto; padding: 2rem 1rem 3rem; }
+h1 { margin: 0 0 0.5rem; font-family: Georgia, 'Times New Roman', serif; font-size: 1.75rem; font-weight: 500; line-height: 1.2; letter-spacing: -0.01em; }
+h2 { margin: 2rem 0 0.75rem; font-size: 0.8rem; font-weight: 400; letter-spacing: 0.13em; text-transform: uppercase; color: var(--muted); }
+h2, code { font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace; font-variant-numeric: tabular-nums; }
+p { margin: 0 0 0.75rem; overflow-wrap: anywhere; }
+.effective { color: var(--muted); font-size: 0.9rem; }
+ul { margin: 0 0 0.75rem; padding: 0; list-style: none; }
+li { padding: 0.75rem 0; border-top: 1px solid var(--line); overflow-wrap: anywhere; }
+li:last-child { border-bottom: 1px solid var(--line); }
+strong { font-weight: 600; }
+code { font-size: 0.8rem; color: var(--muted); word-break: break-all; }
+section { scroll-margin-top: 1rem; }</style>
+</head>
+<body>
+<div class="page">
+<h1>Tenfold privacy policy</h1>
+<main data-policy>
+<p class="effective">Effective <time datetime="2026-11-24">24 November 2026</time>.</p>
+<section id="short">
+<h2>In short</h2>
+<p>Tenfold (works.lifehack.tenfold) is a personal finance and health app for Android, made by Vivian Jeet Singh Sudan. Everything you record in Tenfold is kept on your phone. There is no Tenfold account and no Tenfold server: the developer never receives your data.</p>
+<p>Data leaves your phone only for the services listed under &quot;What leaves your phone&quot;, and, except for Google&#39;s text recognition statistics and the check with Google Play for a newer version each time Tenfold opens, only when you turn the feature on or tap it. No ads, no tracking, nothing sold, rented or shared.</p>
+</section>
+<section id="reads">
+<h2>What Tenfold reads on your phone, and why</h2>
+<p>Android asks you first for text messages, photos, the camera, Health Connect, physical activity and notifications; you can say no, and turn each off later in Android&#39;s settings.</p>
+<ul>
+  <li><strong>Text messages (SMS).</strong> To record spending and balances from your bank and UPI alerts (SMS-based money management). Android hands every new text message to Tenfold as it arrives, personal ones included. Tenfold holds each one in its private storage on the phone, which is never backed up, until the app next runs and checks who sent it. It holds at most 500, and as new ones arrive it deletes, unchecked, those older than about 30 days. At that check, a message from a sender Tenfold does not know as a bank or payment service is deleted without being recorded. In the inbox it looks only at messages from the senders it knows. Messages from those senders are kept, including one-time passwords (OTPs), promotions and reminders, which are marked as moving no money and never become a transaction. Kept messages stay on your phone, and are in your export and in your encrypted backup if you turn it on. <span class="names"><code>RECEIVE_SMS</code> <code>READ_SMS</code></span></li>
+  <li><strong>Notification access.</strong> Tenfold appears on Android&#39;s notification access page, off unless you turn it on, so that a later version can read bank alerts that arrive as notifications. This version reads no notification, even with access turned on.</li>
+  <li><strong>Photos and screenshots.</strong> To find bills and payment screenshots in your Screenshots and Camera folders. You can allow only the photos you choose. Each new picture is copied into Tenfold&#39;s own storage on the phone just long enough to read its text there; the copy is kept only if the picture is a bill or a payment screenshot, and is deleted at once otherwise. Your gallery is never changed. <span class="names"><code>READ_MEDIA_IMAGES</code> <code>READ_MEDIA_VISUAL_USER_SELECTED</code> <code>READ_EXTERNAL_STORAGE</code></span></li>
+  <li><strong>Camera.</strong> Only when you tap &quot;Take a photo&quot; to photograph your own card for its picture on an account. The photo is not saved to your gallery. Before anything is saved you hide the card number, name, expiry and CVV, on the phone; the original photo is never stored, only the masked picture, and it stays on the phone. <span class="names"><code>CAMERA</code></span></li>
+  <li><strong>Health Connect: steps and sleep.</strong> Each day&#39;s step count and your sleep sessions, read only, to show them in Health. Tenfold writes nothing to Health Connect. <span class="names"><code>health.READ_STEPS</code> <code>health.READ_SLEEP</code></span></li>
+  <li><strong>Physical activity.</strong> Only if you choose to count on this phone: the phone&#39;s step counter, and whether the screen is on and the phone is charging, read about every 30 minutes, to count steps and estimate sleep for the days Health Connect does not have. <span class="names"><code>ACTIVITY_RECOGNITION</code></span></li>
+  <li><strong>Reminders.</strong> Notifications for the supplement reminders you set, set again after the phone restarts, waking the phone to show one. <span class="names"><code>POST_NOTIFICATIONS</code> <code>RECEIVE_BOOT_COMPLETED</code> <code>WAKE_LOCK</code></span></li>
+  <li><strong>Internet.</strong> Only for the services listed under &quot;What leaves your phone&quot;. <span class="names"><code>INTERNET</code></span></li>
+  <li><strong>Libraries&#39; permissions.</strong> Granted by Android at install, with no prompt: a check for a network connection before Google&#39;s text recognition sends its statistics; two biometric permissions a storage library declares, which Tenfold never uses; and a permission Android&#39;s support library declares for every app. <span class="names"><code>ACCESS_NETWORK_STATE</code> <code>USE_BIOMETRIC</code> <code>USE_FINGERPRINT</code></span></li>
+</ul>
+</section>
+<section id="records">
+<h2>What you record</h2>
+<p>Your accounts, transactions, bills, debts, savings and wishlist; in Health, your profile, body measurements, meals, targets, supplements and habits; and, if you use Cycle, your periods, symptoms and answers about your cycles. All of it is kept in Tenfold&#39;s own database on your phone.</p>
+<p>Everything is worked out on the phone: reading messages, reading the text on pictures, your totals, plans and patterns. Tenfold sends nothing you record to any AI service, or to any server except your own encrypted Google Drive backup if you turn it on, and the food name or barcode you choose to look up (see below).</p>
+</section>
+<section id="leaves">
+<h2>What leaves your phone, and to whom</h2>
+<ul>
+  <li><strong>Google Drive backup, only if you turn it on.</strong> Your whole data file and your bill screenshots, compressed and then encrypted on the phone (AES-256-GCM) with a key made from a passphrase only you know, stored in a hidden app folder of your own Google Drive. The key stays on the phone, kept so that it cannot be read out, and the developer never has it or your passphrase. Neither Google nor the developer can read the backup. Google&#39;s sign-in asks only for that app folder and your email address, which Tenfold reads from Google to show where the backup goes. <span class="names"><code>www.googleapis.com</code></span></li>
+  <li><strong>Online food lookup, only when you tap &quot;Look it up&quot;.</strong> The food name or barcode you typed, sent to Open Food Facts or to USDA FoodData Central, with the USDA key you entered yourself for USDA. Nothing else about you. <span class="names"><code>world.openfoodfacts.org</code> <code>api.nal.usda.gov</code></span></li>
+  <li><strong>Food tables, only when you download one.</strong> The request for the public file (USDA&#39;s food tables, from USDA). Nothing about you. <span class="names"><code>fdc.nal.usda.gov</code></span></li>
+  <li><strong>Google&#39;s text recognition statistics.</strong> Text on pictures is read on the phone by Google&#39;s ML Kit, through Google Play services, which downloads the recogniser. ML Kit sends Google usage statistics, which cannot be switched off: the device make, model and Android version; Tenfold&#39;s package and version; an identifier for this installation; how long reading took; the image format and size; input and output sizes; event types and error codes. Never the picture or the text read from it.</li>
+  <li><strong>Updates from Google Play.</strong> Each time Tenfold opens, it asks the Google Play Store app on your phone whether a newer version is available; Google Play answers under Google&#39;s privacy policy. Nothing you record is sent.</li>
+</ul>
+<p>Health Connect is on your phone: reading from it sends nothing over the network. Each service above has its own privacy policy.</p>
+</section>
+<section id="never">
+<h2>What Tenfold never does</h2>
+<p>No ads. No analytics or tracking of its own. Your data is never sold, rented or shared with anyone, and is used only for what Tenfold does for you. Android is not allowed to copy it into cloud backups or to a new phone.</p>
+</section>
+<section id="export">
+<h2>Your copy of your data</h2>
+<p>Data → Export everything saves all your records — not the bill screenshots or card photos — as one plain JSON file, not encrypted, which you send where you choose. Keep it as safe as a bank statement. Data → Import a backup replaces everything with such a file.</p>
+</section>
+<section id="delete">
+<h2>Deleting your data</h2>
+<ul>
+  <li><strong>Everything on the phone.</strong> Data → Reset everything, after you type RESET, deletes every record, every bill screenshot and card photo Tenfold kept, the text messages waiting to be checked, and your USDA key. Only the downloaded food tables, which are public data and hold nothing about you, stay until you remove them in Settings, under Health, or uninstall Tenfold. Uninstalling, or Clear storage in Android&#39;s app settings, removes everything Tenfold keeps on the phone.</li>
+  <li><strong>The Drive backup.</strong> Data → Turn off backup, then &quot;Delete it from Drive&quot;. Reset everything asks whether to keep or delete it too. You can also remove Tenfold&#39;s access in your Google Account settings.</li>
+</ul>
+</section>
+<section id="testers">
+<h2>If you are testing Tenfold</h2>
+<p>While Tenfold is in testing on Google Play, the developer has the Google account email address you gave to join, to add you to the tester list and, for the Drive backup, to Google&#39;s list of test users. It is used for nothing else. If you let your phone share usage and diagnostics with Google, Google Play may show the developer crash reports and install statistics, under Google&#39;s privacy policy.</p>
+</section>
+<section id="children">
+<h2>Children</h2>
+<p>Tenfold is not meant for children under 13. The developer collects no data from anyone, children included.</p>
+</section>
+<section id="changes">
+<h2>Changes to this policy</h2>
+<p>A new version is posted here and in the app, with a new effective date. A change to what leaves your phone is said in the app before it takes effect.</p>
+</section>
+<section id="contact">
+<h2>Contact</h2>
+<p>Tenfold is made by Vivian Jeet Singh Sudan.</p>
+<p>vivianjeetsingh@gmail.com is the address for any question about this policy or your data.</p>
+</section>
+</main>
+</div>
+</body>
+</html>
